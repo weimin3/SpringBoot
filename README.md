@@ -106,15 +106,25 @@ SpringBoot
   baseDir: c:/windows
   #使用${属性名}引用数据
   tempDir: ${baseDir}\temp # 注意"${baseDir}\temp"和${baseDir}\temp是不一样的，"${baseDir}\temp"中\t是制表符
-  
-  datasource:
-     
+  [code](springboot_01_02_yaml)
+  #创建类，用于封装以下数据
   ```
-  
-  
+  public class MyDataSource{
+    private String driver;
+    private String url;
+    private String username;
+    private String password;
+- 
+  }
+- ```
+  #由spring加载数据到对象中
+  #使用时从spring中直接获取信息
+  datasource:
+     driver:com.mysql.jdbc.Driver
+     url: jdbc:mysql://localhost/springboot_db
+     username: root
+     password: root666
 
-
-```
 ## 1.3 基于SpringBoot实现SSM整合
 
 

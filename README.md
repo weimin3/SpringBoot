@@ -93,13 +93,25 @@ SpringBoot
   private String hobby1;#传入dance值
   ```
   - 读取全部属性数据
+  ```
+  # 使用自动装配将所有的数据封装到一个对象Environment
+  @Autowired
+  private Environment env;
+  # 数据读取
+  System.out.pringln(env.getProperty("user.name"))
+  ```
+  - 读取引用类型数据
+  ```
+  # 数据之间的相互引用
+  baseDir: c:/windows
+  #使用${属性名}引用数据
+  tempDir: ${baseDir}\temp # 注意"${baseDir}\temp"和${baseDir}\temp是不一样的，"${baseDir}\temp"中\t是制表符
   
-- 数据之间的相互引用
-```
-baseDir: c:/windows
-#使用${属性名}引用数据
-tempDir: ${baseDir}\temp # 注意"${baseDir}\temp"和${baseDir}\temp是不一样的，"${baseDir}\temp"中\t是制表符
-```
+  datasource:
+     
+  ```
+  
+  
 
 
 ```

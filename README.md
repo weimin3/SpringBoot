@@ -126,6 +126,16 @@ SpringBoot
      password: root666
 
 ## 1.3 基于SpringBoot实现SSM整合
+1. 整合JUnit[code](springboot_02_junit)
+- 重点：@SpringBootTest
+- 类型：测试类注解
+- 位置：测试类定义上方
+- 作用：设置JUnit加载的SpringBoot启动类
+2. 整合MyBatis【[code](springboot_03_mybatis)】
+- 核心配置：数据库连接相关信息（连什么？连谁？什么权限）
+- 映射配置：sql映射（xml/注解）
+3. 整合MyBatis-Plus
+4. 整合Druid
 
 
 # 2. 实用篇 

@@ -9,19 +9,17 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>springboot_01_02_yaml</artifactId>
+    <artifactId>springboot_02_junit</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>springboot_01_02_yaml</name>
-    <description>springboot_01_02_yaml</description>
+    <name>springboot_02_junit</name>
+    <description>springboot_02_junit</description>
     <properties>
         <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
-            <groupId> org.springframework.boot </groupId>
-<!--            <artifactId> spring-boot-configuration-processor </artifactId>-->
-<!--            <optional> true </optional>-->
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
         </dependency>
 
         <dependency>
@@ -31,7 +29,15 @@
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring-context</artifactId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.tomcat.embed</groupId>
+            <artifactId>tomcat-embed-core</artifactId>
         </dependency>
     </dependencies>
 

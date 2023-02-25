@@ -44,10 +44,65 @@ SpringBoot
   - http://localhost/users  修改用户信息  PUT(修改/更新)
   - http://localhost/users/1  删除用户信息  DELETE(删除)
   - 根据REST风格对资源进行访问称为RESTful 
-2. RESTful入门案例
 
-3. REST快速开发
 ## 1.2 SpringBoot基础配置
+- 如何复制工程？（原则：保留工程基础结构，抹掉原始工程痕迹）
+  - 进入到保存工程文件的目录中， 复制一个工作作为模块 
+    - 打开pom.xml,修改<artifactId>
+    - 删除文件，只留下src和pom.xml
+  1. 属性配置（官方文档spring boot reference document -> Application properties查看）
+- 修改服务器端口，resource -> application.properties 中 server.por = 80 例如：将http://localhost:8080/books 改为 http://localhost/books
+- 修改banner(比如关闭),resource -> application.properties 中 spring.main.banner-mode= off  
+2. 配置文件分类:同时存在，相同配置按照加载优先级相互覆盖，不同配置文件中不同配置全部保留
+- .properties
+  - server.port = 80
+- .yml(主要用这种)
+  - port： 81
+- .yaml
+  - port： 82
+3. yaml文件
+拓展名两种：.yml;.yaml
+* yaml语法规则：(重点：数据前面要加空格与冒号隔开)
+  - 大小写敏感
+  - 属性层级关系使用多行描述，每行结尾使用冒号结束
+  - 使用缩进表示层级关系，同层级左侧对齐，只允许使用空格（不允许使用Tab）
+  - 属性值前面添加空格（属性名与属性值之间使用冒号+空格作为分隔）
+  - "#"表示注释
+  - 字面值表示方式：
+    - boolean: true/TRUE/True
+    - float: 3.14
+    - int: 123
+    - null: ~
+    - string: helloworld/"helloworld"
+    - date: 2023-02-25
+    - datetime: 2023-02-25T15:02:31+08:00 #时间和日期之间使用T连接，最后使用+代表时区
+4. yaml数据读取
+- 写在controller中写
+  - 读取yaml数据中的单一数据：
+  ```
+  # 一级数据
+  @Value("${country}") #yaml中country: china
+  private String c;
+  
+  # 多级数据
+  @Value("${user.name}") #yaml中user有属性name，age等
+  private String name; 
+  
+  # 数组数据
+  @Value("${hobby[0]}") #yaml中hobby有属性[dance,music,writing]
+  private String hobby1;#传入dance值
+  ```
+  - 读取全部属性数据
+  
+- 数据之间的相互引用
+```
+baseDir: c:/windows
+#使用${属性名}引用数据
+tempDir: ${baseDir}\temp # 注意"${baseDir}\temp"和${baseDir}\temp是不一样的，"${baseDir}\temp"中\t是制表符
+```
+
+
+```
 ## 1.3 基于SpringBoot实现SSM整合
 
 

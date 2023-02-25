@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="springboot_01_03_quickstart" />
+        <module name="springboot_04_druid" />
         <module name="springboot_01_01_quickstart" />
         <module name="springboot_01_02_yaml" />
         <module name="springboot_02_junit" />
@@ -21,6 +22,7 @@
       <module name="springboot_02_junit" target="17" />
       <module name="springboot_02_mybatis" target="17" />
       <module name="springboot_03_mybatis" target="17" />
+      <module name="springboot_04_druid" target="17" />
       <module name="springmvc_rest" target="17" />
     </bytecodeTargetLevel>
   </component>
@@ -33,6 +35,7 @@
       <module name="springboot_02_junit" options="-parameters" />
       <module name="springboot_02_mybatis" options="-parameters" />
       <module name="springboot_03_mybatis" options="-parameters" />
+      <module name="springboot_04_druid" options="-parameters" />
       <module name="springmvc_rest" options="-parameters" />
     </option>
   </component>

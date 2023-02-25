@@ -45,7 +45,7 @@ SpringBoot
   - http://localhost/users/1  删除用户信息  DELETE(删除)
   - 根据REST风格对资源进行访问称为RESTful 
 
-## 1.2 SpringBoot基础配置
+## 1.3 SpringBoot基础配置
 - 如何复制工程？（原则：保留工程基础结构，抹掉原始工程痕迹）
   - 进入到保存工程文件的目录中， 复制一个工作作为模块 
     - 打开pom.xml,修改<artifactId>
@@ -125,7 +125,7 @@ SpringBoot
      username: root
      password: root666
 
-## 1.3 基于SpringBoot实现SSM整合
+## 1.4 基于SpringBoot实现SSM整合
 1. 整合JUnit[code](springboot_02_junit)
 - 重点：@SpringBootTest
 - 类型：测试类注解
@@ -140,9 +140,21 @@ SpringBoot
   - 3. 定义数据层接口与映射配置（interface BookDao）
   - 4. 测试类中注入dao接口，测试功能
 3. 整合MyBatis-Plus
-
-4. 整合Druid
-
+- MyBatis-Plus与MyBatis的区别：
+  - 导入坐标不同
+  - 数据层实现不同
+4. 整合Druid 【[code](springboot_04_druid)】
+5. SSMP整合案例 【[code]()】
+- 案例实现方案分析：
+  - 实体类开发：使用lombok快速制作实体类
+  - dao开发：整合mybatisplus,制作数据层测试类
+  - service开发：基于mybatisplus进行增量开发，制作业务层测试类
+  - controller开发：基于restful开发，使用postman测试接口功能
+  - controller开发：前后端开发协议制作
+  - 页面开发：基于vue+elementUI制作，前后端联调，页面数据处理，页面消息处理
+    - 列表，新增，修改，删除，分页，查询
+  - 项目异常处理
+  - 按条件查询--页面功能调整，Controller修正功能，Service修正功能
 
 # 2. 实用篇 
 ## 2.1 运维

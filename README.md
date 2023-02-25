@@ -134,6 +134,11 @@ SpringBoot
 2. 整合MyBatis【[code](springboot_03_mybatis)】
 - 核心配置：数据库连接相关信息（连什么？连谁？什么权限）
 - 映射配置：sql映射（xml/注解）
+- 步骤：
+  - 1. 创建新模块，选择spring innitializr,配置模块信息（mybatis framework 及mysql driver勾选）
+  - 2. 设置数据源参数（application.yml）
+  - 3. 定义数据层接口与映射配置（interface BookDao）
+  - 4. 测试类中注入dao接口，测试功能
 3. 整合MyBatis-Plus
 4. 整合Druid
 
